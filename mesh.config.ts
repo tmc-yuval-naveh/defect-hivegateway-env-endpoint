@@ -3,6 +3,7 @@ config()
 // ------------------------------------------------------
 
 import { defineConfig, loadGraphQLHTTPSubgraph } from '@graphql-mesh/compose-cli'
+import { GatewayCLIConfig } from '@graphql-hive/gateway'
 
 export const composeConfig = defineConfig({
   subgraphs: [
@@ -19,3 +20,14 @@ export const composeConfig = defineConfig({
     }
   ]
 })
+
+// A workaround for the hive gateway not working with the interpolated env var in supergraph schema
+// export const gatewayConfig: GatewayCLIConfig = {
+//   transportEntries: {
+//     // 👇 your subgraph name
+//     Countries: {
+//       // 👇 your new location
+//       location: process.env.SUBGRAPH_ENDPOINT
+//     }
+//   }
+// }
