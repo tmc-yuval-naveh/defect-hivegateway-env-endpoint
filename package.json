@@ -1,0 +1,25 @@
+{
+  "name": "mesh-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mesh:build": "DEBUG=1 npx mesh-compose -o supergraph.graphql",
+    "mesh:serve": "DEBUG=1 npx hive-gateway supergraph supergraph.graphql",
+    "mesh:dev": "pnpm mesh:build && pnpm mesh:serve",
+    "upg": "npx npm-check-updates -i && pnpm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.1",
+  "dependencies": {
+    "@graphql-hive/gateway": "^1.13.5",
+    "@graphql-mesh/compose-cli": "^1.4.6",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^17.1.16"
+  }
+}
