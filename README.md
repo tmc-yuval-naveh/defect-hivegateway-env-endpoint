@@ -10,7 +10,7 @@ When an env var is used in mesh.config.ts as the subgraph endpoint the hive gate
 ```
 
 [2025-04-07T13:44:06.952Z] DEBUG [requestId=b5def054-6bdf-4b7c-b8fe-b5a406e915e9, fetchId=2e796841-02d2-44e8-a2d1-c85f43413dd5, http-fetch-request]  {
-  url: '{env.SUBGRAPH_ENDPOINT}',
+  url: '{env.SUBGRAPH_GRAPHQL_COUNTRIES_ENDPOINT}',
   method: 'POST',
   body: '{"query":"query($filter:CountryFilterInput){__typename countries(filter:$filter){__typename code capital currency}}","variables":{"filter":{}}}',
   headers: {

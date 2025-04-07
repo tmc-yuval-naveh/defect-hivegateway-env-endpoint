@@ -17,6 +17,7 @@
   "dependencies": {
     "@graphql-hive/gateway": "^1.13.5",
     "@graphql-mesh/compose-cli": "^1.4.6",
+    "@omnigraph/openapi": "^0.109.3",
     "dotenv": "^16.4.7"
   },
   "devDependencies": {
